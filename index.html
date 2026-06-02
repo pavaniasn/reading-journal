@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading Journal — Pavani Ayinampudi</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .disclaimer {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.2rem;
+      margin-bottom: 2.5rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .disclaimer strong { color: var(--mid); }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 2rem;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--mid);
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #eef2ff;
+    }
+
+    .entry-list { max-width: 680px; }
+
+    .read-entry {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .read-entry:first-of-type { border-top: none; padding-top: 0; }
+
+    .read-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.7rem;
+      flex-wrap: wrap;
+    }
+    .read-date {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .read-tag {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 2rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .read-entry h2 {
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+    .read-entry h2 a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .read-entry h2 a:hover { color: var(--accent); }
+
+    .read-source {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .read-source a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .read-source a:hover { text-decoration: underline; }
+
+    .read-summary {
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .read-notes {
+      background: var(--bg2);
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 0.8rem 1rem;
+      font-family: 'Georgia', serif;
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.75;
+      font-style: italic;
+    }
+    .read-notes-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Reading Journal</a>
+    <ul>
+      <li><a href="https://pavaniasn.github.io" target="_blank">Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div class="page-hero">
+      <div class="section-label">Personal Journal</div>
+      <h1>What I'm Reading</h1>
+      <p>A running log of articles, essays, talks, and ideas that shaped my thinking. Organized so I don't lose what I learn.</p>
+    </div>
+
+    <section style="padding-top: 2rem;">
+
+      <div class="disclaimer">
+        <strong>Personal use only.</strong> This journal logs sources I have read, with brief summaries and personal notes for my own learning and reference. All entries link to and credit their original authors and publications. No content is reproduced in full. This site is not for commercial use, has no affiliation with any of the sources cited, and is not intended for public distribution. If you are the author of a cited work and have concerns, please reach out at <a href="mailto:pavania.harvard2025@gmail.com" style="color: var(--accent);">pavania.harvard2025@gmail.com</a>.
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">AI &amp; Technology</button>
+        <button class="filter-btn">Education</button>
+        <button class="filter-btn">Leadership</button>
+        <button class="filter-btn">Policy</button>
+        <button class="filter-btn">Society</button>
+        <button class="filter-btn">Ideas</button>
+      </div>
+
+      <div class="entry-list">
+
+        <!-- ENTRY TEMPLATE — duplicate this block to add a new entry
+        <article class="read-entry">
+          <div class="read-meta">
+            <span class="read-date">June 2, 2026</span>
+            <span class="read-tag">Ideas</span>
+          </div>
+          <h2><a href="SOURCE_URL" target="_blank">Title of the piece</a></h2>
+          <div class="read-source">Author Name &nbsp;·&nbsp; <a href="SOURCE_URL" target="_blank">Publication / Platform</a></div>
+          <p class="read-summary">Summary goes here.</p>
+          <div class="read-notes">
+            <span class="read-notes-label">My notes</span>
+            Personal reflection goes here.
+          </div>
+        </article>
+        -->
+
+        <article class="read-entry">
+          <div class="read-meta">
+            <span class="read-date">June 2, 2026</span>
+            <span class="read-tag">Ideas</span>
+          </div>
+          <h2><a href="http://paulgraham.com/luck.html" target="_blank">Luck</a></h2>
+          <div class="read-source">Paul Graham &nbsp;·&nbsp; <a href="http://paulgraham.com" target="_blank">paulgraham.com</a></div>
+          <p class="read-summary">Graham argues that luck is not purely random but something you can position yourself for. The more curious you are, the more you read, connect, and try, the larger your surface area for luck to land on. The essay is short but the idea is one of those that reframes how you think about agency and chance.</p>
+          <div class="read-notes">
+            <span class="read-notes-label">My notes</span>
+            Took this into a talk with a thousand students. The line "make yourself a big target for luck" unlocked a longer question for me: when good things happen, do we give ourselves enough credit for having positioned ourselves there? And does that question even have the same answer for everyone, depending on where they start?
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Personal reading log &nbsp;·&nbsp; Pavani Ayinampudi &nbsp;·&nbsp; Not for redistribution</p>
+  </div>
+</footer>
+
+</body>
+</html>
