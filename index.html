@@ -54,7 +54,12 @@ title: Learning Logs
               {%- endif %}
             {%- endif %}
           </div>
+          {%- if entry.summary and entry.summary != "" %}
           <div class="read-summary">{{ entry.summary | markdownify }}</div>
+          {%- endif %}
+          {%- if entry.content != "" %}
+          <div class="read-content">{{ entry.content }}</div>
+          {%- endif %}
           {%- if entry.notes and entry.notes != "" %}
           <div class="read-notes">
             <span class="read-notes-label">My notes</span>
