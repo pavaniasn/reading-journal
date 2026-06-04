@@ -1,0 +1,13 @@
+title: Learning Logs
+description: A running log of ideas, readings, and things that shaped my thinking.
+baseurl: "/reading-journal"
+url: "https://pavaniasn.github.io"
+
+collections:
+  entries:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

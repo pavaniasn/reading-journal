@@ -1,250 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reading Journal — Pavani Ayinampudi</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .disclaimer {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 0.9rem 1.2rem;
-      margin-bottom: 2.5rem;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-    .disclaimer strong { color: var(--mid); }
-
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .filter-btn {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.78rem;
-      padding: 0.3rem 0.85rem;
-      border-radius: 2rem;
-      border: 1.5px solid var(--border);
-      background: transparent;
-      color: var(--mid);
-      cursor: pointer;
-      transition: all 0.2s;
-      letter-spacing: 0.02em;
-    }
-    .filter-btn:hover, .filter-btn.active {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: #eef2ff;
-    }
-
-    .entry-list { max-width: 680px; }
-
-    .read-entry {
-      padding: 2.5rem 0;
-      border-top: 1px solid var(--border);
-    }
-    .read-entry:first-of-type { border-top: none; padding-top: 0; }
-
-    .read-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.7rem;
-      flex-wrap: wrap;
-    }
-    .read-date {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .read-tag {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.72rem;
-      padding: 0.2rem 0.65rem;
-      border-radius: 2rem;
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .read-entry h2 {
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.25rem;
-      line-height: 1.4;
-    }
-    .read-entry h2 a {
-      color: var(--ink);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .read-entry h2 a:hover { color: var(--accent); }
-
-    .read-source {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .read-source a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .read-source a:hover { text-decoration: underline; }
-
-    .read-summary {
-      font-family: 'Georgia', serif;
-      font-size: 0.95rem;
-      color: var(--mid);
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-
-    .read-notes {
-      background: var(--bg2);
-      border-left: 3px solid var(--accent2);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 0.8rem 1rem;
-      font-family: 'Georgia', serif;
-      font-size: 0.9rem;
-      color: var(--mid);
-      line-height: 1.75;
-      font-style: italic;
-    }
-    .read-notes-label {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.72rem;
-      font-style: normal;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      display: block;
-      margin-bottom: 0.3rem;
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Reading Journal</a>
-    <ul>
-      <li><a href="https://pavaniasn.github.io" target="_blank">Portfolio</a></li>
-    </ul>
-  </div>
-</nav>
+---
+layout: default
+title: Learning Logs
+---
 
 <main>
   <div class="container">
 
     <div class="page-hero">
       <div class="section-label">Personal Journal</div>
-      <h1>What I'm Reading</h1>
-      <p>A running log of articles, essays, talks, and ideas that shaped my thinking. Organized so I don't lose what I learn.</p>
+      <h1>What I'm Learning</h1>
+      <p>A running log of ideas, readings, class sessions, and conversations that shaped my thinking. Organized so I don't lose what I learn.</p>
     </div>
 
     <section style="padding-top: 2rem;">
 
       <div class="disclaimer">
-        <strong>Personal use only.</strong> This journal logs sources I have read, with brief summaries and personal notes for my own learning and reference. All entries link to and credit their original authors and publications. No content is reproduced in full. This site is not for commercial use, has no affiliation with any of the sources cited, and is not intended for public distribution. If you are the author of a cited work and have concerns, please reach out at <a href="mailto:pavania.harvard2025@gmail.com" style="color: var(--accent);">pavania.harvard2025@gmail.com</a>.
+        <strong>Personal use only.</strong> This journal logs sources I have read or engaged with, with brief summaries and personal notes for my own learning and reference. All entries link to and credit their original authors and publications. No content is reproduced in full. This site is not for commercial use, has no affiliation with any of the sources cited, and is not intended for public distribution. If you are the author of a cited work and have concerns, please reach out at <a href="mailto:pavania.harvard2025@gmail.com">pavania.harvard2025@gmail.com</a>.
       </div>
 
       <div class="filter-bar">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">AI &amp; Technology</button>
-        <button class="filter-btn">Education</button>
-        <button class="filter-btn">Leadership</button>
-        <button class="filter-btn">Policy</button>
-        <button class="filter-btn">Society</button>
-        <button class="filter-btn">Ideas</button>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai & technology">AI &amp; Technology</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="leadership">Leadership</button>
+        <button class="filter-btn" data-filter="policy">Policy</button>
+        <button class="filter-btn" data-filter="society">Society</button>
+        <button class="filter-btn" data-filter="ideas">Ideas</button>
       </div>
 
       <div class="entry-list">
 
-        <!-- ENTRY TEMPLATE — duplicate this block to add a new entry
-        <article class="read-entry">
+        {% assign sorted_entries = site.entries | sort: "date" | reverse %}
+        {% for entry in sorted_entries %}
+        <article class="read-entry" data-tag="{{ entry.tag | downcase }}">
           <div class="read-meta">
-            <span class="read-date">June 2, 2026</span>
-            <span class="read-tag">Ideas</span>
+            <span class="read-date">{{ entry.date | date: "%B %-d, %Y" }}</span>
+            <span class="read-tag">{{ entry.tag }}</span>
           </div>
-          <h2><a href="SOURCE_URL" target="_blank">Title of the piece</a></h2>
-          <div class="read-source">Author Name &nbsp;·&nbsp; <a href="SOURCE_URL" target="_blank">Publication / Platform</a></div>
-          <p class="read-summary">Summary goes here.</p>
+          <h2>
+            {%- if entry.source_url and entry.source_url != "" -%}
+              <a href="{{ entry.source_url }}" target="_blank">{{ entry.title }}</a>
+            {%- else -%}
+              {{ entry.title }}
+            {%- endif -%}
+          </h2>
+          <div class="read-source">
+            {{ entry.author }}
+            {%- if entry.source and entry.source != "" %} &nbsp;·&nbsp;
+              {%- if entry.source_url and entry.source_url != "" %}
+                <a href="{{ entry.source_url }}" target="_blank">{{ entry.source | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+              {%- else %}
+                {{ entry.source | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+              {%- endif %}
+            {%- endif %}
+          </div>
+          <div class="read-summary">{{ entry.summary | markdownify }}</div>
+          {%- if entry.notes and entry.notes != "" %}
           <div class="read-notes">
             <span class="read-notes-label">My notes</span>
-            Personal reflection goes here.
+            {{ entry.notes | markdownify }}
           </div>
+          {%- endif %}
         </article>
-        -->
-
-        <article class="read-entry">
-          <div class="read-meta">
-            <span class="read-date">June 3, 2026</span>
-            <span class="read-tag">Leadership</span>
-          </div>
-          <h2>Miles' Law</h2>
-          <div class="read-source">Rufus Miles &nbsp;·&nbsp; Public Administration concept &nbsp;·&nbsp; Class session</div>
-          <p class="read-summary">Miles' Law: "Where you stand depends on where you sit." The position you occupy in a system shapes what you see, what you prioritize, and what you advocate for. It's not about integrity or honesty — it's about vantage point. Two equally honest people sitting in different roles will reach different conclusions from the same evidence.</p>
-          <div class="read-notes">
-            <span class="read-notes-label">My notes</span>
-            This stayed with me the whole day because it kept showing up in every other idea I encountered. The founder and the executive are both "right" — they just sit in different seats. The same budget, the same organization, the same facts. Different seats, different stands.
-          </div>
-        </article>
-
-        <article class="read-entry">
-          <div class="read-meta">
-            <span class="read-date">June 3, 2026</span>
-            <span class="read-tag">Leadership</span>
-          </div>
-          <h2>Explore vs. Exploit — and What Eric Ries Is Building On It</h2>
-          <div class="read-source">Class discussion &nbsp;·&nbsp; Eric Ries, <em>The Lean Startup</em> &amp; <em>Incorruptible</em> (forthcoming)</div>
-          <p class="read-summary">In reinforcement learning, every agent faces a core tension: keep exploring new options, or exploit what's already working? Lean too far into exploration and you never build a stable strategy. Lean too far into exploitation and you get locked into a local optimum. Eric Ries mapped this same tension onto startups in <em>The Lean Startup</em> — the pivot-or-persevere decision is exactly this trade-off. His forthcoming book <em>Incorruptible</em> takes it further: founders are wired for exploration mode, executives for exploitation mode. Both are necessary. The problem is that most organizations have no tools to consciously move between them — and that gap is what kills them.</p>
-          <div class="read-notes">
-            <span class="read-notes-label">My notes</span>
-            I found this connection genuinely clarifying. The reason founders and executives fight isn't personality — it's that they are literally in different operating modes, and neither mode is wrong for where that person sits. Miles' Law again. What Ries is apparently arguing in Incorruptible is that the tools need to connect these modes — not pick one. That framing feels important for anyone building an organization that needs to both innovate and execute.
-          </div>
-        </article>
-
-        <article class="read-entry">
-          <div class="read-meta">
-            <span class="read-date">June 3, 2026</span>
-            <span class="read-tag">Ideas</span>
-          </div>
-          <h2>Pigeonholes, Birthday Paradoxes, and Why Randomness Leaves Gaps</h2>
-          <div class="read-source">Class session &nbsp;·&nbsp; Probability and computer science concepts</div>
-          <p class="read-summary">Three connected ideas from a class session on probability and hashing. First: the pigeonhole principle — if you have more pigeons than holes, at least one hole must hold more than one. Clean and obvious. Second: the birthday paradox — you need only 23 people in a room for there to be a better-than-even chance two share a birthday, because we should be counting pairs, not individuals. Third: throw 100 balls randomly into 100 bins and expect even distribution — but randomness doesn't work that way. Some bins get multiple balls, some stay empty. Scale to 1,000 balls or 10,000 and the number of overpicked bins grows, but only by a digit. This is exactly why hashing in computer science must account for collisions — they are not edge cases, they are the expected behavior of randomness. And the number of empty bins in these distributions converges, in the limit, to a value involving <em>e</em> (Euler's number, ≈ 2.718) — the same constant that governs compound interest and natural growth.</p>
-          <div class="read-notes">
-            <span class="read-notes-label">My notes</span>
-            I came in as a non-technical person and the part that genuinely surprised me was the appearance of e. Not "approximately" — actually converges to it. The fact that the same mathematical constant shows up in compound interest, natural logarithms, and in how randomness fills empty bins feels like it's pointing at something true about the structure of reality, not just the math. I didn't follow the full derivation, but the high-level idea landed.
-          </div>
-        </article>
-
-        <article class="read-entry">
-          <div class="read-meta">
-            <span class="read-date">June 2, 2026</span>
-            <span class="read-tag">Ideas</span>
-          </div>
-          <h2><a href="http://paulgraham.com/luck.html" target="_blank">Luck</a></h2>
-          <div class="read-source">Paul Graham &nbsp;·&nbsp; <a href="http://paulgraham.com" target="_blank">paulgraham.com</a></div>
-          <p class="read-summary">Graham argues that luck is not purely random but something you can position yourself for. The more curious you are, the more you read, connect, and try, the larger your surface area for luck to land on. The essay is short but the idea is one of those that reframes how you think about agency and chance.</p>
-          <div class="read-notes">
-            <span class="read-notes-label">My notes</span>
-            Took this into a talk with a thousand students. The line "make yourself a big target for luck" unlocked a longer question for me: when good things happen, do we give ourselves enough credit for having positioned ourselves there? And does that question even have the same answer for everyone, depending on where they start?
-          </div>
-        </article>
+        {% endfor %}
 
       </div>
     </section>
@@ -252,11 +70,19 @@
   </div>
 </main>
 
-<footer>
-  <div class="container">
-    <p>Personal reading log &nbsp;·&nbsp; Pavani Ayinampudi &nbsp;·&nbsp; Not for redistribution</p>
-  </div>
-</footer>
-
-</body>
-</html>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var filter = this.dataset.filter;
+      document.querySelectorAll('.read-entry').forEach(function(entry) {
+        if (filter === 'all') {
+          entry.style.display = '';
+        } else {
+          entry.style.display = (entry.dataset.tag === filter) ? '' : 'none';
+        }
+      });
+    });
+  });
+</script>
